@@ -5,8 +5,8 @@
   
 <h3>Consider this JSON object to be data from the backend:</h3>  
     {data:[{  
-            startTime,  
-            endTime  
+            startDate,  
+            endDate,  
             timeStart,  
             timeEnd,  
             flight#,  
