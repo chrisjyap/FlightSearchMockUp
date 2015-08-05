@@ -1,0 +1,24 @@
+<header><h3>Search Form:</h3></header>
+<form name="searchFlights" novalidate ng-submit="submitForm()" >
+    <div ng-class="{ 'error' : searchFlights.startDate.$invalid && !searchFlights.startDate.$pristine }">
+        <label for="startDate">Start Date:</label>
+        <input type="text" name= "startDate" id="startDate" ng-model="formObj.startDate" required><br>
+    </div>
+    <div ng-class="{ 'error' : searchFlights.endDate.$invalid && !searchFlights.endDate.$pristine }">
+        <label for="endDate">End Date:</label>
+        <input type="text" name="endDate" id="endDate" ng-model="formObj.endDate" required><br>
+    </div>
+    <div ng-class="{ 'error' : searchFlights.from.$invalid && !searchFlights.from.$pristine }">
+        <label for="from">From:</label>
+        <input type="text" name="from" id="from" ng-model="formObj.from" required ng-pattern="/[a-z]{3,20}/i"><br>
+    </div>
+    <div ng-class="{ 'error' : searchFlights.to.$invalid && !searchFlights.to.$pristine }">
+        <label for="to">To:</label>
+        <input type="text" name="to" id="to" ng-model="formObj.to" required ng-pattern="/[a-z]{3,20}/i"><br>
+    </div>
+    <div ng-class="{ 'error' : searchFlights.capacity.$invalid && !searchFlights.capacity.$pristine }">
+        <label for="capacity">Number of People:</label>
+        <input type="text" name="capacity" id="capacity" ng-model="formObj.capacity" required ng-pattern='/\d+/'><br>
+    </div>
+    <input type="submit" ng-disabled="searchFlights.$invalid"/>
+</form>
