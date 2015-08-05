@@ -1,6 +1,6 @@
 <h2>Quick Mock Up question</h2>
 
-<h3>Install:<h3>  
+<h3>Install:</h3>  
     bower install (if bower is installed already)  
   
 <h3>Consider this JSON object to be data from the backend:</h3>  
