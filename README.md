@@ -20,7 +20,7 @@ The factory service has the request call and will return data or redirect user b
 return from backend.
 
 <h4>Model</h4>
-Consider this to be the JSON object result from the backend:
+Consider this to be the JSON object result from the backend:  
     {data:[{  
             startDate,  
             endDate,  
