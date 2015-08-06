@@ -21,21 +21,21 @@ return from backend.
 
 <h4>Model</h4>
 Consider this to be the JSON object result from the backend:
-    {data:[{
-            startDate,
-            endDate,
-            timeStart,
-            timeEnd,
-            flight#,
-            price
-        },
-        {...},
-        ...
-    ],
-    ...
-    }
+    {data:[{  
+            startDate,  
+            endDate,  
+            timeStart,  
+            timeEnd,  
+            flight#,  
+            price  
+        },  
+        {...},  
+        ...  
+    ],  
+    ...  
+    }  
 
-<h4>Testing</h4>
+<h4>Unit Testing</h4>
 I would use Jasmine for unit testing. We would use $httpBackend to mock responses from backend when
 testing the factory service. We would also test our filter with various inputs.
 
