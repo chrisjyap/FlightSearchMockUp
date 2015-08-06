@@ -1,7 +1,7 @@
 /**
  * Created by Chris on 8/4/2015.
  */
-var myApp = angular.module('myApp', ['myApp.form']);
+var myApp = angular.module('myApp', ['myApp.form', 'myApp.services']);
 
 myApp.filter('sortStart', function(){
     return function(arr){
@@ -11,31 +11,4 @@ myApp.filter('sortStart', function(){
             return 0;
         });
     }
-});
-
-myApp.factory('httpRequest', function($http, $location){
-    return {
-        getReq: function(obj) {
-            $http.get('url', {params:obj}).then(function(data){
-                return data;
-            },function(err, statusCode){
-                switch(statusCode){
-                    case 401:
-                        $location.path('/Unauth');
-                        break;
-                    case 403:
-                        $location.path('/Forbidden');
-                        break;
-                    case 500:
-                        $location.path('/ServerErr');
-                        break;
-                    default:
-                        $location.path('/NotFound')
-                }
-            });
-        },
-        postReq: function(obj) {
-            //posts to url backend. currently not needed
-        }
-    };
 });

@@ -2,7 +2,7 @@
  * Created by Chris on 8/4/2015.
  */
 
-angular.module('myApp.form', []).controller('MainController', function ($scope, httpRequest, $filter){
+angular.module('myApp.form', []).controller('MainController', ['$scope', 'httpRequest', '$filter', function ($scope, httpRequest, $filter){
     $scope.formObj = {};
     $scope.submitForm = function(){
         $scope.results = httpRequest.getReq($scope.formObj);
@@ -11,7 +11,7 @@ angular.module('myApp.form', []).controller('MainController', function ($scope, 
         //$scope.results now an array of objects
         $scope.formObj = {};
     };
-});
+}]);
 
 /*
     Assuming this is the result from backend:
